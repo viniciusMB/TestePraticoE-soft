@@ -1,0 +1,17 @@
+{% extends 'main/base.html'%}
+{% block title %}Lista de usuários{%endblock%}
+
+{%block content%}
+<div class="collumn justify-content-center">
+    <div class="jumbotron">
+        <h1 class="mt-2"> Usuários cadastrados</h1>
+    </div>
+    <div class="col-8">
+        <ul>
+            {%for item in users%}
+            <li class="list-group-item">{{item.nome}} {{item.sobrenome}}</li>
+            {%endfor%}
+        </ul>
+    </div>   
+</div>
+{%endblock%}

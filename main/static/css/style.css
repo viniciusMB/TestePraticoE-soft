@@ -1,0 +1,134 @@
+nav {
+    height: 5vh;
+    background-color: #111;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    width:  50%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.nav-links li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+
+}
+
+nav a:hover{
+    color: #f1f1f1;
+}
+
+
+.main{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background: whitesmoke;
+    margin: 5px;
+}
+nav {
+    position: relative;
+}
+
+.hamburger {
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    z-index: 2;
+}
+
+.nav-links{
+  position: fixed;
+  background-color: #111;
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  clip-path: circle(100px at 90% -10%);
+  -webkit-clip-path: circle(100px at 90% -10%);
+  transition: all 1s ease-out;
+  pointer-events: none;
+}
+
+.nav-links.open {
+    clip-path: circle(2250px at 90% -10%);
+  -webkit-clip-path: circle(2250px at 90% -10%);
+  pointer-events: all;
+}
+
+.main.open {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.1s linear;
+
+}
+
+.main-h1 {
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+}
+
+
+
+@media screen and (max-width: 768px){
+
+    .line {
+        width: 30px;
+        height: 3px;
+        background: whitesmoke;
+        margin: 5px;
+    }
+    nav {
+        position: relative;
+    }
+    
+    .hamburger {
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+    }
+
+  .nav-links{
+      position: fixed;
+      background-color: #111;
+      height: 100vh;
+      width: 100%;
+      flex-direction: column;
+      clip-path: circle(100px at 90% -10%);
+      -webkit-clip-path: circle(100px at 90% -10%);
+      transition: all 1s ease-out;
+      pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1500px at 90% -10%);
+      -webkit-clip-path: circle(1500px at 90% -10%);
+      pointer-events: all;
+    }
+
+    .main.open {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.1s linear;
+
+    }
+}
